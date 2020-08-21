@@ -15,8 +15,9 @@ var burgers = {
         orm.updateOne("burgers", cols, value, function(res){
             cb(res);
         })
-    }   
-
+    }  
 }
+
+module.exports = burgers;
 
 
