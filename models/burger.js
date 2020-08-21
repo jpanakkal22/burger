@@ -10,7 +10,12 @@ var burgers = {
         orm.insertOne("burgers", val, function(res){
             cb(res);
         })
-    }
+    },
+    updateOne: function(cols, value, cb){
+        orm.updateOne("burgers", cols, value, function(res){
+            cb(res);
+        })
+    }   
 
 }
 
