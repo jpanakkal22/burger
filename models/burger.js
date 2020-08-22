@@ -11,8 +11,8 @@ var burgers = {
             cb(res);
         })
     },
-    updateOne: function(cols, value, cb){
-        orm.updateOne("burgers", cols, value, function(res){
+    updateOne: function(col1, val1, col2, val2, cb){
+        orm.updateOne("burgers", col1, val1, col2, val2, function(res){
             cb(res);
         })
     }  
