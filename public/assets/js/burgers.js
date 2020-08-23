@@ -2,10 +2,9 @@
 $(function() {
   $(".change-burger").on("click", function(event) {
     var id = $(this).data("id");
-    var newBurger = $(this).data("newburger");
-
+    
     var newBurgerState = {
-      devoured: newBurger
+      devoured: 1
     };
 
     // Send the PUT request.
@@ -14,7 +13,7 @@ $(function() {
       data: newBurgerState
     }).then(
       function() {
-        console.log("changed burger to", newBurger);
+        
         // Reload the page to get the updated list
         location.reload();
       }
