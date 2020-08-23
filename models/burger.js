@@ -1,13 +1,13 @@
-const orm = require("../config/orm");
+var orm = require("../config/orm.js");
 
-var burgers = {
+var burger = {
     selectAll: function(cb){
         orm.selectAll("burgers", function(res){
             cb(res);
         })
     },
-    insertOne: function(val, cb){
-        orm.insertOne("burgers", val, function(res){
+    insertOne: function(cols, vals, cb){
+        orm.insertOne("burgers", cols, vals, function(res){
             cb(res);
         })
     },
@@ -18,6 +18,6 @@ var burgers = {
     }  
 }
 
-module.exports = burgers;
+module.exports = burger;
 
 
