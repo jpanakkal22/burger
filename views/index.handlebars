@@ -1,39 +1,48 @@
-<h1>Eat-da-Burger!</h1>
+<div class="row d-flex justify-content-center">
+  <img src="https://lh3.googleusercontent.com/proxy/H5bfk4N_kLiQzIwEA2PkB8JULRGfYqjp4oCcV6I8AIabFiBN1ULCaeexgMn1Mh-ITTsN_xpMj3lwkjPnfrX2LJeUovMCQBXp8kPJRgW0jltfekvUqbgCsiQLuoCpOXxVDavwFMihGt_JO6-yVHg3bUB4" alt="burger">
 
-<h2>Burgers that are not eaten!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burger/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+</div>
 
-<h2>Burgers that have been devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burger/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bg">Burger Name:</label>
-    <input type="text" id="bg" name="burger_name">
+<div class="row d-flex justify-content-center">
+  <div class="col-sm-4 text-center">
+    <h1>Eat-da-Burger!</h1>   
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="devour">Devoured?</label><br>
-    <input type="radio" name="devour" value="0" checked> Not Eaten<br>
-    <input type="radio" name="devour" value="1"> Devoured!
+
+
+<div class="row">
+  <div class="col-sm-4">
+    <ol>
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burger/burger-block devour=true}}
+        {{/unless}}
+      {{/each}}
+    </ol>
   </div>
+  <div class="col-sm-4">
+    <h5>Enter a burger that you want to smash!</h5>
+      <form class="create-form">
+        <div class="form-group d-flex justify-content-center">          
+          <textarea type="text" id="bg" name="burger_name" cols="50"></textarea>
+        </div>
+        <button  class="center" type="submit">Submit</button>
+      </form>
+  </div>
+  <div class="col-sm-4">
+    <ol>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burger/burger-block devour=false}}
+        {{/if}}
+      {{/each}}
+    </ol>
+  </div>
+</div>
 
- 
-  <button type="submit">Submit</button>
-</form>
+
+
+

@@ -2,6 +2,7 @@ li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+ 
 }
 
 .label {
@@ -17,3 +18,29 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+img {
+  height: 200px;
+}
+
+.change-burger {
+  display: inline-block;
+  margin-left: 20px;
+  
+}
+
+h5 {
+  text-align: center;
+}
+
+.center {
+  margin-top: 15px;
+  position: absolute;  
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+
