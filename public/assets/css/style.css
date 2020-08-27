@@ -1,8 +1,22 @@
+.body {
+  background-color: orange;
+}
+.jumbotron {
+background-image: url("../img/burger.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-color: orange;
+
+}
+
+.color {
+  background-color: orange;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
- 
+  background: #faebd7; 
 }
 
 .label {
@@ -23,10 +37,8 @@ img {
   height: 200px;
 }
 
-.change-burger {
-  display: inline-block;
-  margin-left: 20px;
-  
+h3 {
+  text-align: center;
 }
 
 h5 {

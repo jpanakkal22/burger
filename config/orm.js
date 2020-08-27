@@ -34,11 +34,11 @@ function objToSql(ob) {
 
 
 var orm = {
-  selectAll: function(tableInput, cb) {
-    var queryString = "SELECT * FROM ??";
-    connection.query(queryString, [tableInput], function(err, result) {
+  selectAll: function(table, cb) {
+    var queryString = "SELECT * FROM " + table + ";";
+    connection.query(queryString, function(err, result) {
       if (err) throw err;
-      // console.log(result);
+     
       cb(result);
     });
   },
@@ -78,7 +78,7 @@ var orm = {
     });
   },
   deleteOne: function(table, condition, cb){
-    var queryString = "DELETE FROM " + table + "WHERE " + condition;
+    var queryString = "DELETE FROM " + table + " WHERE " + condition;
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {

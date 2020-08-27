@@ -1,47 +1,54 @@
-<div class="row d-flex justify-content-center">
-  <img src="https://lh3.googleusercontent.com/proxy/H5bfk4N_kLiQzIwEA2PkB8JULRGfYqjp4oCcV6I8AIabFiBN1ULCaeexgMn1Mh-ITTsN_xpMj3lwkjPnfrX2LJeUovMCQBXp8kPJRgW0jltfekvUqbgCsiQLuoCpOXxVDavwFMihGt_JO6-yVHg3bUB4" alt="burger">
+<div class="container">
 
+  <div class="jumbotron"></div>
 
-</div>
+  <div class="row d-flex justify-content-center color">
+    <div class="col-sm-4 text-center">
+      <h1>Eat-da-Burger!</h1>   
+    </div>
+  </div>
 
-
-<div class="row d-flex justify-content-center">
-  <div class="col-sm-4 text-center">
-    <h1>Eat-da-Burger!</h1>   
+  <div class="row color">
+    <div class="col-sm-4">
+      <h3>Eat Me!</h3>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}          
+            <span><strong> {{this.burger_name}} </strong></span>
+              <button type="button" class="change-burger" data-id="{{this.id}}" data-newBurger="{{devour}}">Devour It!</span></button>
+              <br>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm-4">
+        <h5>Enter a burger that you want to smash!</h5>
+        <form class="create-form">
+          <div class="form-group d-flex justify-content-center">          
+            <textarea type="text" id="bg" name="burger_name" cols="50"></textarea>
+          </div>
+          <button  class="center" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="col-sm-4">
+      <h3>SMASHED!</h3>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            <span><strong> {{this.burger_name}} </strong></span>
+                <button type="button" class="remove-burger" data-id="{{this.id}}" data-newBurger="{{devour}}">Remove</button>
+                <br>                 
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
 </div>
 
 
 
-<div class="row">
-  <div class="col-sm-4">
-    <ol>
-      {{#each burgers}}
-        {{#unless devoured}}
-          {{> burger/burger-block devour=true}}
-        {{/unless}}
-      {{/each}}
-    </ol>
-  </div>
-  <div class="col-sm-4">
-    <h5>Enter a burger that you want to smash!</h5>
-      <form class="create-form">
-        <div class="form-group d-flex justify-content-center">          
-          <textarea type="text" id="bg" name="burger_name" cols="50"></textarea>
-        </div>
-        <button  class="center" type="submit">Submit</button>
-      </form>
-  </div>
-  <div class="col-sm-4">
-    <ol>
-      {{#each burgers}}
-        {{#if devoured}}
-          {{> burger/burger-block devour=false}}
-        {{/if}}
-      {{/each}}
-    </ol>
-  </div>
-</div>
+
+
 
 
 
