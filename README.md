@@ -1,6 +1,6 @@
 # Eat-da-Burger
 
-![Eat-da-Burger](../public/assets/img/imageA.png)
+![Eat-da-Burger](public/assets/img/ImageA.PNG)
 
 ## Description
 This project uses MySQL, Handlebars, and Express to create and interact with a database for storing, updating and deleting your favorite burgers!
